@@ -1,0 +1,21 @@
+class Vehiculo:
+
+    def __init__(self, color, puertas):
+        self.color = color
+        self.puertas = puertas
+
+    def __str__(self):
+        return self.color + " " + self.puertas
+
+corsa = Vehiculo("rojo", "3")
+print(corsa)
+
+file = open('vehiculo_objeto', 'w+b')
+
+dump(toyota, file)
+
+file.seek(0)
+nuevo_toyota = load(file)
+
+print(nuevo_toyota)
+file.close()
